@@ -1,33 +1,33 @@
-package Day23;
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 
-class Solution {
-    public boolean isIsomorphic(String s, String t) {
+public class Problem1 {
 
-        if (s.length() != t.length()) {
-            return false;
+    public static List<List<Integer>> subsets(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        backtrack(nums, 0, new ArrayList<>(), result);
+        return result;
+    }
+
+    public static void backtrack(int[] nums, int index, List<Integer> current, List<List<Integer>> result) {
+
+        result.add(new ArrayList<>(current));
+
+        for (int i = index; i < nums.length; i++) {
+            current.add(nums[i]);
+
+            backtrack(nums, i + 1, current, result);
+
+            current.remove(current.size() - 1);
         }
+    }
 
-        HashMap<Character, Character> map1 = new HashMap<>();
-        HashMap<Character, Character> map2 = new HashMap<>();
+    public static void main(String[] args) {
 
-        for (int i = 0; i < s.length(); i++) {
-            char c1 = s.charAt(i);
-            char c2 = t.charAt(i);
+        int[] nums = {1, 2, 3};
 
-            if (map1.containsKey(c1)) {
-                if (map1.get(c1) != c2) {
-                    return false;
-                }
-            } else {
-                if (map2.containsKey(c2)) {
-                    return false;
-                }
-                map1.put(c1, c2);
-                map2.put(c2, c1);
-            }
-        }
+        List<List<Integer>> result = subsets(nums);
 
-        return true;
+        System.out.println(result);
     }
 }

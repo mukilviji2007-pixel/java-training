@@ -1,33 +1,52 @@
-import java.util.*;
+public class Problem4 {
 
-class Solution {
-    public List<Integer> findAnagrams(String s, String p) {
-        List<Integer> result = new ArrayList<>();
+    static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
 
-        if (s.length() < p.length())
-            return result;
+        TreeNode(int val) {
+            this.val = val;
+        }
+    }
 
-        int[] count = new int[26];
+    public static boolean isBalanced(TreeNode root) {
+        return height(root) != -1;
+    }
 
-        for (char c : p.toCharArray())
-            count[c - 'a']++;
+    public static int height(TreeNode node) {
 
-        int left = 0, right = 0;
-
-        while (right < s.length()) {
-            count[s.charAt(right) - 'a']--;
-
-            while (count[s.charAt(right) - 'a'] < 0) {
-                count[s.charAt(left) - 'a']++;
-                left++;
-            }
-
-            if (right - left + 1 == p.length())
-                result.add(left);
-
-            right++;
+        if (node == null) {
+            return 0;
         }
 
-        return result;
+        int leftHeight = height(node.left);
+
+        if (leftHeight == -1) {
+            return -1;
+        }
+
+        int rightHeight = height(node.right);
+
+        if (rightHeight == -1) {
+            return -1;
+        }
+
+        if (Math.abs(leftHeight - rightHeight) > 1) {
+            return -1;
+        }
+
+        return Math.max(leftHeight, rightHeight) + 1;
+    }
+
+    public static void main(String[] args) {
+
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(9);
+        root.right = new TreeNode(20);
+        root.right.left = new TreeNode(15);
+        root.right.right = new TreeNode(7);
+
+        System.out.println(isBalanced(root));
     }
 }

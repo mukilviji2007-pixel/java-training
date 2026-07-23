@@ -1,21 +1,40 @@
-class Solution {
-    public int maxVowels(String s, int k) {
-        int count = 0, max = 0;
+public class Problem3 {
 
-        for (int i = 0; i < s.length(); i++) {
-            if (isVowel(s.charAt(i)))
-                count++;
+    static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
 
-            if (i >= k && isVowel(s.charAt(i - k)))
-                count--;
-
-            max = Math.max(max, count);
+        TreeNode(int val) {
+            this.val = val;
         }
-
-        return max;
     }
 
-    private boolean isVowel(char c) {
-        return "aeiou".indexOf(c) != -1;
+    public static boolean isSameTree(TreeNode p, TreeNode q) {
+
+        if (p == null && q == null) {
+            return true;
+        }
+
+        if (p == null || q == null) {
+            return false;
+        }
+
+        return (p.val == q.val) &&
+               isSameTree(p.left, q.left) &&
+               isSameTree(p.right, q.right);
+    }
+
+    public static void main(String[] args) {
+
+        TreeNode p = new TreeNode(1);
+        p.left = new TreeNode(2);
+        p.right = new TreeNode(3);
+
+        TreeNode q = new TreeNode(1);
+        q.left = new TreeNode(2);
+        q.right = new TreeNode(3);
+
+        System.out.println(isSameTree(p, q));
     }
 }
