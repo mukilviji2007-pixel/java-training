@@ -1,8 +1,12 @@
-package Day2;
+package day3;
 
 public class problem2 {
     public static void main(String[] args) {
-        float height = 5.8f;
-        System.out.println(height);
+        int a = 10, b = 20;
+        System.out.println(a > b);
+        System.out.println(a < b);
+        System.out.println(a == b);
+        System.out.println(a != b);
     }
 }
+

@@ -1,6 +1,14 @@
-public class Main {
+package day3;
+
+public class problem1 {
+
     public static void main(String[] args) {
-        int age = 20;
-        System.out.println(age);
+        int a = 10, b = 5;
+        System.out.println("Addition = " + (a + b));
+        System.out.println("Subtraction = " + (a - b));
+        System.out.println("Multiplication = " + (a * b));
+        System.out.println("Division = " + (a / b));
+        System.out.println("Modulus = " + (a % b));
     }
 }
+

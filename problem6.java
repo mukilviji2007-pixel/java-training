@@ -1,9 +1,9 @@
-package Day2;
+package day3;
 
 public class problem6 {
+
     public static void main(String[] args) {
-        String name = "Harini";
-        System.out.println(name);
+        int a = 5;
+        System.out.println(--a);
     }
 }
-

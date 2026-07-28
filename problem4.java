@@ -1,9 +1,13 @@
-package Day2;
+package day3;
 
 public class problem4 {
+
     public static void main(String[] args) {
-        char grade = 'A';
-        System.out.println(grade);
+        int a = 10;
+        a += 5;
+        System.out.println(a);
+        a -= 3;
+        System.out.println(a);
     }
 }
 
