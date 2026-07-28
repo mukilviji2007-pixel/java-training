@@ -1,14 +1,12 @@
-package day3;
+package day4;
 
 public class problem1 {
-
     public static void main(String[] args) {
-        int a = 10, b = 5;
-        System.out.println("Addition = " + (a + b));
-        System.out.println("Subtraction = " + (a - b));
-        System.out.println("Multiplication = " + (a * b));
-        System.out.println("Division = " + (a / b));
-        System.out.println("Modulus = " + (a % b));
+        int a = 10;
+        double b = a;
+
+        System.out.println("Integer: " + a);
+        System.out.println("Double: " + b);
     }
 }
 

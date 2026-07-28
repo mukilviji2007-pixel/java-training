@@ -1,8 +1,11 @@
-package day3;
+package day4;
 
 public class problem5 {
     public static void main(String[] args) {
-        int a = 5;
-        System.out.println(++a);
+        byte b = 20;
+        int i = b;
+
+        System.out.println(i);
     }
-}
+} 
+

@@ -1,8 +1,11 @@
-class Test {
-    Test() {
-        System.out.println("Constructor Executed");
-    }
+package day4;
+
+public class problem11 {
     public static void main(String[] args) {
-        new Test();
+        int ascii = 97;
+        char ch = (char) ascii;
+
+        System.out.println(ch);
     }
 }
+

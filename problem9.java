@@ -1,7 +1,10 @@
-class Student {
-    String name = "Harini";
+package day4;
+
+public class problem9 {
     public static void main(String[] args) {
-        Student s = new Student();
-        System.out.println(s.name);
+        double d = 25.67;
+        float f = (float) d;
+
+        System.out.println(f);
     }
 }

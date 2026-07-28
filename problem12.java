@@ -1,10 +1,11 @@
-public class problem12 {
+package day4;
 
-    
-    static {
-        System.out.println("Static Block");
-    }
+public class problem12 {
     public static void main(String[] args) {
-        System.out.println("Main Method");
+        char ch = 'Z';
+        int ascii = ch;
+
+        System.out.println(ascii);
     }
 }
+

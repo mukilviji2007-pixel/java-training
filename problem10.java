@@ -1,8 +1,11 @@
-class MethodDemo {
-    void show() {
-        System.out.println("Method Called");
-    }
+package day4;
+
+public class problem10 {
     public static void main(String[] args) {
-        new MethodDemo().show();
+        int num = 66;
+        char ch = (char) num;
+
+        System.out.println(ch);
     }
 }
+

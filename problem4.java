@@ -1,13 +1,11 @@
-package day3;
+package day4;
 
 public class problem4 {
-
     public static void main(String[] args) {
-        int a = 10;
-        a += 5;
-        System.out.println(a);
-        a -= 3;
-        System.out.println(a);
+        float f = 12.5f;
+        double d = f;
+
+        System.out.println(d);
     }
 }
 
