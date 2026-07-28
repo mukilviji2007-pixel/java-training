@@ -1,7 +1,9 @@
-public class problem4 {
-    
-    public static void main(String[] args) {
-        System.out.println(System.getProperty("java.runtime.version"));
-    }
+package Day2;
 
+public class problem4 {
+    public static void main(String[] args) {
+        char grade = 'A';
+        System.out.println(grade);
+    }
 }
+

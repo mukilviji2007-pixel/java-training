@@ -1,7 +1,9 @@
-public class problem3 {
-   
-    public static void main(String[] args) {
-        System.out.println(System.getProperty("java.vm.name"));
-    }
+package Day2;
 
+public class problem3 {
+    public static void main(String[] args) {
+        double price = 99.99;
+        System.out.println(price);
+    }
 }
+
